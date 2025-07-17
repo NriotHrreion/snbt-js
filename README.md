@@ -21,7 +21,7 @@ Supports SNBT (Stringified NBT) with zero dependencies.
 ## Installation
 
 ```bash
-npm install nbt-js
+npm install snbt-js
 ```
 
 ## Usage
