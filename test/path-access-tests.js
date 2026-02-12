@@ -96,12 +96,12 @@ describe('Path Access Tests', () => {
       });
       
       // This should not throw an error, but also should not set the value
-      // since the intermediate path doesn't exist
+      // since 'inventory' doesn't exist on the player object (parent is undefined)
       expect(() => {
         nbt.set(['player', 'inventory', 'count'], new NbtNumber(5));
       }).to.not.throw();
       
-      // Verify the value was not set (because parent path doesn't exist)
+      // Verify the value was not set (because 'inventory' doesn't exist)
       const result = nbt.get(['player', 'inventory', 'count']);
       expect(result).to.be.undefined;
     });
